@@ -6,7 +6,7 @@ metadata:
 spec:
   replicas:
   selector:
-    metchLabels:
+    matchLabels:
       app: mysql
   template:
     metadata:
