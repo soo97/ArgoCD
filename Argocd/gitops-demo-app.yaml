@@ -1,0 +1,18 @@
+# ArgoCD에서 사용하는 Application 리소스 정의
+apiVersion: argoproj.io/v1alpha1 # ArgoCD API 버전
+kind: Application                # ArgoCD를 Application 리소스 타입으로 사용
+metadata:
+  name: demo
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/soo97/ArgoCD.git  # 배포 되는 Git 저장소
+    targetRevision: master  # 사용할 브랜치
+    path: apps/demo         # 해당 브랜치 내에서 사용할 디렉토리 경로
+
+    syncPolicy:
+      automated:            # 자동 동기화 활성화 (Git 변경 시 자동 배포)
+        prune: true         # Git에서 삭제되면 클러스터에서도 자동 삭제
+        selfHeal: true      # Git과 클러스터 상태가 서로 다르면 Git 기준으로 복구
