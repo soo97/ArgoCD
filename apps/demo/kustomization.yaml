@@ -9,7 +9,7 @@ resources:
   - gitops-mysql-deployment.yaml
   - gitops-mysql-service.yaml
   - gitops-deployment.yaml
-  - gitops-mysql-service.yaml
+  - gitops-service.yaml
 
 images:
   - name: docker.io/soohyun97/demo
