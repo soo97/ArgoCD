@@ -20,4 +20,4 @@ spec:
             - containerPort: 8080
           envFrom:
             - configMapRef:
-              name: demo-config
+                name: demo-config
