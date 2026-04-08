@@ -14,4 +14,4 @@ resources:
 images:
   - name: docker.io/soohyun97/demo
     newName: docker.io/soohyun97/demo
-    newTag: PLACEHOLDER
+    newTag: 0d6df1a
